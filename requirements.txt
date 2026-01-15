@@ -1,0 +1,30 @@
+# Core Dependencies
+langchain==0.3.14
+langchain-core==0.3.28
+langchain-community==0.3.13
+langchain-huggingface==0.1.2
+
+# Vector Store
+faiss-cpu==1.9.0.post1
+
+# Embeddings
+sentence-transformers==3.3.1
+
+# LLM
+langchain-ollama==0.2.1
+
+# PDF Processing
+pdfplumber==0.11.4
+
+# Web UI
+gradio==5.9.1
+
+# Utilities
+transformers==4.47.1
+torch==2.5.1
+tokenizers==0.21.0
+huggingface-hub==0.27.0
+
+# Optional (for development)
+jupyter==1.1.1
+notebook==7.3.2
