@@ -477,8 +477,8 @@ Response (출처 표시)
 
 ```bash
 # 1. 저장소 클론
-git clone https://github.com/yourusername/rag_system.git
-cd rag_system
+git clone https://github.com/parks602/onpremise-rag-system.git
+cd onpremise-rag-system
 
 # 2. 가상환경 생성
 python -m venv .venv
@@ -498,10 +498,10 @@ ollama pull phi4-mini:3.8b-fp16
 # pdf_files/ 디렉토리에 PDF 배치
 
 # 2. 벡터 스토어 생성
-python build_vectorstore.py ./pdf_files ./output
+python src/build_vectorstore.py ./pdf_files ./output
 
 # 3. Web UI 실행
-python web_ui.py ./output ./pdf_files 7860
+python src/web_ui.py ./output ./pdf_files 7860
 
 # 4. 브라우저에서 접속
 # http://localhost:7860
@@ -518,8 +518,8 @@ rag_system/
 │   ├── chunker.py           # 텍스트 청킹 (1024 토큰, 메타데이터 분리)
 │   ├── vector_store.py      # FAISS 벡터 스토어 관리
 │   ├── rag_qa.py            # RAG 시스템 (핵심 로직)
-│   └── web_ui.py            # Gradio 웹 인터페이스
-├── build_vectorstore.py     # 벡터 스토어 생성 스크립트
+│   ├── web_ui.py            # Gradio 웹 인터페이스
+│   └── build_vectorstore.py # 벡터 스토어 생성 스크립트
 ├── pdf_files/               # 입력 PDF 파일
 ├── output/                  # 벡터 스토어 출력
 │   ├── vectorstore/         # FAISS 인덱스
